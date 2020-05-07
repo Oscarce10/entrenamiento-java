@@ -1,4 +1,4 @@
-package entrenamiento;
+
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -54,7 +54,8 @@ public class BaseComparator {
 							res = '>';
 						else
 							res = '=';
-						System.out.println(res);
+						System.out.println(s + " " + b + " " + res + " " + t + " " + c);
+						System.out.println("  " + dec_s + " " + res + " " + dec_t + "  ");
 					}
 				}
 			}

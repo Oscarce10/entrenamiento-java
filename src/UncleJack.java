@@ -1,9 +1,10 @@
-package entrenamiento;
+
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,17 +19,16 @@ public class UncleJack {
 			Matcher mt;
 			boolean res;
 			
-			while((line = reader.readLine()) != null) {
+			while(!(line = reader.readLine()).equals("0 0")) {
 				mt = pt.matcher(line);
 				res = mt.matches();
 				if(res) {
-					int n = Integer.parseInt(mt.group(1));
 					int d = Integer.parseInt(mt.group(2));
-					if(n == 0 && d == 0) {
-						break;
-					}else {
-						System.out.println(line + " = " + (int) Math.pow(n, d));
-					}
+					
+					BigInteger resultado = new BigInteger(mt.group(1));
+					resultado = resultado.pow(d);
+
+					System.out.println(resultado);
 				}
 			}
 		} catch (FileNotFoundException e) {

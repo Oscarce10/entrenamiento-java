@@ -1,4 +1,4 @@
-package entrenamiento;
+
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -17,7 +17,7 @@ public class Factorials {
 			reader = new BufferedReader(new FileReader("src\\txt\\factorial.txt"));			
 			String line;
 			// El numero debe ser maximo de dos digitos y debe contener minimo un signo !
-			String re = "(10|[0-9]) (!+)";
+			String re = "(\\d{1,2}) (!+)";
 			Pattern pt = Pattern.compile(re);
 			Matcher mt;
 			
@@ -29,7 +29,7 @@ public class Factorials {
 						int n = Integer.parseInt(mt.group(1));
 						// Obtiene cuantos signos ! hay						
 						int k = mt.group(2).length();
-						System.out.println(line + " = " + ((n % k == 0) ? (fact(n, 1, k) * k) : (fact(n, 1, k) * (n % k))));
+						System.out.println(((n % k == 0) ? (Factorials.fact(n, 1, k) * k) : (Factorials.fact(n, 1, k) * (n % k))));
 					}
 				}
 				
@@ -45,7 +45,7 @@ public class Factorials {
 	}
 	
 	public static int fact(int n, int mult, int k) {
-		return (n == 1) ? 1 : n * fact(n - (mult*k), mult++, k);
+		return (n <= 1) ? 1 : n * fact(n - (mult*k), mult++, k);
 }
 
 }
