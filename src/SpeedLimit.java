@@ -10,7 +10,7 @@ public class SpeedLimit {
 
 	public static void main(String[] args) {
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("src\\speedLimit.in"));
+			BufferedReader reader = new BufferedReader(new FileReader("src/speedLimit.in"));
 			String line;
 			String ex1 = "\\d";
 			String ex2 = "([0-8][0-9]|[0-9]) (1[0-2]|[0-9])";
@@ -19,9 +19,7 @@ public class SpeedLimit {
 			ArrayList<Integer> horas;
 			ArrayList<Integer> mph;
 			Matcher mt;
-			while((line = reader.readLine())!= null) {
-				if(line.equals("-1"))
-					return;
+			while(!(line = reader.readLine()).equals("-1")) {				
 				if(line.isBlank())
 					line = reader.readLine();
 				mt = pt1.matcher(line);
