@@ -20,8 +20,6 @@ public class SpeedLimit {
 			ArrayList<Integer> mph;
 			Matcher mt;
 			while(!(line = reader.readLine()).equals("-1")) {				
-				if(line.isBlank())
-					line = reader.readLine();
 				mt = pt1.matcher(line);
 				horas = new ArrayList<Integer>();
 				mph = new ArrayList<Integer>();
@@ -29,8 +27,6 @@ public class SpeedLimit {
 					int inputs = Integer.parseInt(mt.group());
 					for(int i = 0; i < inputs; i++) {						
 						line = reader.readLine();
-						if(line.isBlank())
-							line = reader.readLine();
 						mt = pt2.matcher(line);
 						if(mt.matches()) {
 							mph.add(Integer.parseInt(mt.group(1)));

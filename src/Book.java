@@ -21,8 +21,10 @@ public class Book {
 					return;
 				mt = pt.matcher(line);
 				if(mt.matches()) {
-					int start = Integer.parseInt(mt.group(1));
-					int end = Integer.parseInt(mt.group(2));
+					int start = (Integer.parseInt(mt.group(1)) < Integer.parseInt(mt.group(2))) ? Integer.parseInt(mt.group(1))
+							: Integer.parseInt(mt.group(2));
+					int end = (Integer.parseInt(mt.group(1)) > Integer.parseInt(mt.group(2))) ? Integer.parseInt(mt.group(1))
+							: Integer.parseInt(mt.group(2));
 					if (start <= end) {
 						String [] numbers = new String[end - start + 1];
 						int [] keys = new int[10];
