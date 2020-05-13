@@ -1,0 +1,21 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f595b1abf05, pid=756, tid=773
+#
+# JRE version: OpenJDK Runtime Environment (11.0.7+9) (build 11.0.7+9)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.7+9, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x2f05]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/lib/systemd/coredump-wrapper %E %P %u %g %s %t %c %h %e" (or dumping to /home/oscarce/Documentos/entrenamiento-java/core.756)
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:39845 -javaagent:/home/oscarce/.var/app/org.eclipse.Java/eclipse/configuration/org.eclipse.osgi/219/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 Rounders
+
+Host: AMD Ryzen 3 2200G with Radeon Vega Graphics, 4 cores, 7G, 

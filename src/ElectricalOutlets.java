@@ -36,13 +36,9 @@ public class ElectricalOutlets {
 								mt = pt3.matcher(line);
 								if (mt.matches()) {
 									String[] snum = line.split(" ");
-									int[] num = new int[snum.length - 1];
-									for (int j = 0; j < num.length; j++) {
-										num[j] = Integer.parseInt(snum[j + 1]) - 1;
-									}
 									int sum = 1;
-									for(int n: num) {
-										sum+=n;
+									for (int j = 0; j < snum.length - 1; j++) {
+										sum += Integer.parseInt(snum[j + 1]) - 1;
 									}
 									System.out.println(sum);
 
