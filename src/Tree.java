@@ -20,7 +20,7 @@ public class Tree {
 				int width1 = 4*t1 - 1;
 				int heigth2 = 2*t2;
 				int width2 = 4*t2 - 1;
-				int maxH = 2 * max + 2;
+				int maxH = 2 * max + max;
 				int maxW = width1 + width2 + 1;
 				char [][] matrix = new char[maxH][maxW];
 				int a = 0; // Fila

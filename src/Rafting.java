@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,8 +10,9 @@ public class Rafting {
 	// Entrenamiento 3
 
 	public static void main(String[] args) {
-		try {
-			BufferedReader re = new BufferedReader(new FileReader("src\\rafting.in"));
+		try {			
+			//BufferedReader re = new BufferedReader(new FileReader("src\\rafting.in"));
+			BufferedReader re = new BufferedReader(new InputStreamReader(System.in));
 			String line;
 			String er1 = "^[1-9]*$";
 			String er2 = "^([1-9]\\d*)\\s(1000|[1-9]\\d\\d|[1-9]\\d\\d|[1-9]\\d|[1-9])$";
@@ -45,13 +47,24 @@ public class Rafting {
 									sumPesos += Integer.parseInt(weigth[j]);
 									
 								}
-								for (int j = 1; j > 0 ; j++) {
-									if(sumPesos / j <= pesoMax) {
-										System.out.println(j);
-										break;
+								if(numCli > 2) {
+									for (int j = 2; j > 0 ; j++) {
+										if(sumPesos / j < pesoMax) {
+											System.out.println(j);
+											break;
+										}
+											
 									}
-										
+								}else {
+									for (int j = 1; j > 0 ; j++) {
+										if(sumPesos / j <= pesoMax) {
+											System.out.println(j);
+											break;
+										}
+											
+									}
 								}
+								
 								
 							}
 						}

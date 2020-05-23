@@ -2,9 +2,13 @@
 public class test {
 
 	public static void main(String[] args) {
-		System.out.println(257%100);
-		System.out.println((257/100) + 1);
-		System.out.println((182%100) + 1);
+		int sqsum = 0;
+		int sum = 0;
+		for (int i = 1; i < 100; i++) {
+			sqsum += i*i;
+			sum += i;
+		}
+		System.out.println(sqsum - (sum*sum));
 	}
 
 }
