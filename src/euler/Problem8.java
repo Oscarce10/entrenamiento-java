@@ -92,7 +92,6 @@ public class Problem8 {
 			mult *= values[i];
 		}
 		System.out.println(mult);
-		
 
 	}
 
